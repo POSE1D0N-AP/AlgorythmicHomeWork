@@ -45,12 +45,12 @@ void taskTwo()
     int  n;
     cin >> n;
     int* arr = new int[n];
-    int n1, n2;
-    cin >> n1 >> n2;
+    int bot, top;
+    cin >> bot >> top;
 
     for (int i = 0; i < n; i++)
     {
-        arr[i] = (rand() % (n2 - n1)) + n1;
+        arr[i] = (rand() % (top - bot)) + bot;
     }
 
     arrPrint(arr, n);
@@ -83,13 +83,14 @@ void taskThree()
 
     float* arr = new float[n];
 
-    int n1, n2;
-    cin >> n1 >> n2;
+    int bot, top;
+    cin >> bot >> top;
 
     for (int i = 0; i < n; i++)
     {
-        arr[i] = float(rand() % (n2 - n1) + n1) + (rand() % 10) * 0.1;
+        arr[i] = ((rand() % (top - bot)) + bot) + (rand() % 10) * 0.1;
     }
+
 
     arrPrint(arr, n);
 
@@ -111,15 +112,13 @@ void taskFour()
     cin >> n;
     int* arr = new int[n];
 
-    int n1, n2;
-
-    cin >> n1 >> n2;
+    int bot, top;
+    cin >> bot >> top;
 
     for (int i = 0; i < n; i++)
     {
-        arr[i] = rand() % (n2 - n1) + n1;
+        arr[i] = (rand() % (top - bot)) + bot;
     }
-
     arrPrint(arr, n);
 
     int min = 0, iMin = 0, mx = 0, iMax = 0;
@@ -140,7 +139,6 @@ void taskFour()
     arr[iMin] -= arr[iMax];
 
     arrPrint(arr, n);
-
 }
 
 
@@ -150,16 +148,17 @@ void taskFive()
     cin >> n;
     float* arr = new float[n];
 
-    int n1, n2;
-    cin >> n1 >> n2;
+    int bot, top;
+    cin >> bot >> top;
 
     int n3, k;
     cin >> n3 >> k;
 
     for (int i = 0; i < n; i++)
     {
-        arr[i] = float(rand() % (n2 - n1) + n1) + (rand() % 10) * 0.1;
+        arr[i] = ((rand() % (top - bot)) + bot) + (rand() % 10) * 0.1;
     }
+
     arrPrint(arr, n);
 
     float* secondArr = new float[n - n3];
@@ -186,7 +185,6 @@ void taskFive()
     }
 
     arrPrint(arr, n);
-
 }
 
 int main()
@@ -195,5 +193,5 @@ int main()
     // taskTwo();
     // taskThree();
     // taskFour();
-    taskFive();
+     taskFive();
 }
