@@ -79,7 +79,7 @@ void taskThree()
     int  n;
     do {
         cin >> n;
-    } while (n % 2 > 0);
+    } while (n % 2 == 0);
 
     float* arr = new float[n];
 
